@@ -23,7 +23,7 @@ RUN tar -xvzf kafka_2.11-0.8.2.1.tgz
 
 #WORKDIR ./
 #ADD pom.xml ./pom.xml
-ADD iot-kafka-producer ./iot-kafka-producer
+ADD src ./src
 
 #RUN ["mvn", "dependency:resolve"]
 #RUN ["mvn", "verify"]
@@ -31,6 +31,6 @@ ADD iot-kafka-producer ./iot-kafka-producer
 
 #Run Zookeeper And Kafka
 #######################
-CMD sh iot-kafka-producer/src/main/resources/entryPoint.sh
+CMD sh src/main/resources/entryPoint.sh
 
 #CMD ["/bin/bash"]
